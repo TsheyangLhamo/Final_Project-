@@ -10,16 +10,22 @@ public class Walking : MonoBehaviour
     void Start()
     {
 
+        
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) // Left movement
         {
             transform.Translate(Pspeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, 0f);
 
         }
 
-    }
-    // Update is called once per frame
-    void Update()
-    {
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Right movement
+        {
+            transform.Translate(Pspeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, 0f);
 
+        }
     }
 }
