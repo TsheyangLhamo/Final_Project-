@@ -4,28 +4,33 @@ using UnityEngine;
 
 public class Walking : MonoBehaviour
 {
-    private float Pspeed = 5f;
+    private Rigidbody2D rigidbody2D;
+    private float velocityx;
+    private float velocityy;
+    public float speed = 100f;
 
     // Start is called before the first frame update
     void Start()
     {
+        rigidbody2D = GetComponent<Rigidbody2D>();
 
         
 
     }
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) // Left movement
-        {
-            transform.Translate(Pspeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, 0f);
+    {   velocityx = (Input.GetAxis("Horizontal"));
+        velocityy = (Input.GetAxis("Vertical"));
 
+        rigidbody2D.velocity = new Vector2(velocityx * speed, velocityy * speed);
+
+        if (velocityx < 0) 
+        { 
+            transform.localScale = new Vector3(-2, 2, 1); 
         }
-
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Right movement
+        else if (velocityx > 0)
         {
-            transform.Translate(Pspeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, 0f);
-
+            transform.localScale = new Vector3(2, 2, 1);
         }
     }
 }
