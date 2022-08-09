@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Prefab 1 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5037485453003964041, guid: f516260ae96ee6b4ea49057f72eef32b, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7923088427978334834, guid: f516260ae96ee6b4ea49057f72eef32b, type: 3}
       propertyPath: m_RootOrder
       value: 0
