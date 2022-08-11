@@ -5,9 +5,10 @@ using UnityEngine;
 public class Walking : MonoBehaviour
 {
     private Rigidbody2D rigidbody2D;
-    private float velocityx;
+    private float velocityx;    
     private float velocityy;
     public float speed = 100f;
+    public Health playerHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -33,4 +34,15 @@ public class Walking : MonoBehaviour
             transform.localScale = new Vector3(2, 2, 1);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Damage"))
+        {
+            playerHealth.TakeDamage(5);
+            Destroy(collision.gameObject);
+        }
+    }
+
+    
 }

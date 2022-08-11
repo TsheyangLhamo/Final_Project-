@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4523387570196534867}
   - component: {fileID: 5037485453003964041}
   - component: {fileID: 6303621294505664054}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: New Prefab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0010908395, y: 0.0031765401}
+  m_Offset: {x: -0.1428992, y: 0.0031765401}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -151,7 +151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5723684, y: 0.37817615}
+  m_Size: {x: 0.28875163, y: 0.37817615}
   m_EdgeRadius: 0
 --- !u!1 &4523387569270627893
 GameObject:
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523387569270627894}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulletParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
