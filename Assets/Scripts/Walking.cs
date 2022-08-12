@@ -39,7 +39,7 @@ public class Walking : MonoBehaviour
     {
         if (collision.CompareTag("Damage"))
         {
-            playerHealth.TakeDamage(5);
+            playerHealth.TakeDamage(2);
             Destroy(collision.gameObject);
         }
     }
